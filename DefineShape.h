@@ -1,7 +1,7 @@
 #pragma once
 
 
-#include "taginstance.h"
+#include "TagInstance.h"
 #include "Rect.h"
 #include "SWFReader.h"
 #include "SWFWriter.h"

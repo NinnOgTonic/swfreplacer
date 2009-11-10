@@ -35,18 +35,18 @@ OBJECTFILES= \
 	${OBJECTDIR}/Exports.o \
 	${OBJECTDIR}/DefineFont2.o \
 	${OBJECTDIR}/DefineFont.o \
-	${OBJECTDIR}/DefineEditText.o \
 	${OBJECTDIR}/Rect.o \
+	${OBJECTDIR}/DefineEditText.o \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/PlaceObject2.o \
 	${OBJECTDIR}/Tag.o \
 	${OBJECTDIR}/DefineButton2.o \
-	${OBJECTDIR}/DefineShape.o \
 	${OBJECTDIR}/TagWithCharacterID.o \
+	${OBJECTDIR}/DefineShape.o \
 	${OBJECTDIR}/SWFReader.o \
-	${OBJECTDIR}/DefineJPEG2.o \
-	${OBJECTDIR}/Header.o \
 	${OBJECTDIR}/SWFFile.o \
+	${OBJECTDIR}/Header.o \
+	${OBJECTDIR}/DefineJPEG2.o \
 	${OBJECTDIR}/DefineSprite.o \
 	${OBJECTDIR}/TagInstance.o \
 	${OBJECTDIR}/SWFWriter.o
@@ -95,15 +95,15 @@ ${OBJECTDIR}/DefineFont.o: nbproject/Makefile-${CND_CONF}.mk DefineFont.cpp
 	${RM} $@.d
 	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/DefineFont.o DefineFont.cpp
 
-${OBJECTDIR}/DefineEditText.o: nbproject/Makefile-${CND_CONF}.mk DefineEditText.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/DefineEditText.o DefineEditText.cpp
-
 ${OBJECTDIR}/Rect.o: nbproject/Makefile-${CND_CONF}.mk Rect.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Rect.o Rect.cpp
+
+${OBJECTDIR}/DefineEditText.o: nbproject/Makefile-${CND_CONF}.mk DefineEditText.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/DefineEditText.o DefineEditText.cpp
 
 ${OBJECTDIR}/main.o: nbproject/Makefile-${CND_CONF}.mk main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
@@ -125,35 +125,35 @@ ${OBJECTDIR}/DefineButton2.o: nbproject/Makefile-${CND_CONF}.mk DefineButton2.cp
 	${RM} $@.d
 	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/DefineButton2.o DefineButton2.cpp
 
-${OBJECTDIR}/DefineShape.o: nbproject/Makefile-${CND_CONF}.mk DefineShape.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/DefineShape.o DefineShape.cpp
-
 ${OBJECTDIR}/TagWithCharacterID.o: nbproject/Makefile-${CND_CONF}.mk TagWithCharacterID.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/TagWithCharacterID.o TagWithCharacterID.cpp
+
+${OBJECTDIR}/DefineShape.o: nbproject/Makefile-${CND_CONF}.mk DefineShape.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/DefineShape.o DefineShape.cpp
 
 ${OBJECTDIR}/SWFReader.o: nbproject/Makefile-${CND_CONF}.mk SWFReader.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/SWFReader.o SWFReader.cpp
 
-${OBJECTDIR}/DefineJPEG2.o: nbproject/Makefile-${CND_CONF}.mk DefineJPEG2.cpp 
+${OBJECTDIR}/SWFFile.o: nbproject/Makefile-${CND_CONF}.mk SWFFile.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/DefineJPEG2.o DefineJPEG2.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/SWFFile.o SWFFile.cpp
 
 ${OBJECTDIR}/Header.o: nbproject/Makefile-${CND_CONF}.mk Header.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Header.o Header.cpp
 
-${OBJECTDIR}/SWFFile.o: nbproject/Makefile-${CND_CONF}.mk SWFFile.cpp 
+${OBJECTDIR}/DefineJPEG2.o: nbproject/Makefile-${CND_CONF}.mk DefineJPEG2.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/SWFFile.o SWFFile.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/DefineJPEG2.o DefineJPEG2.cpp
 
 ${OBJECTDIR}/DefineSprite.o: nbproject/Makefile-${CND_CONF}.mk DefineSprite.cpp 
 	${MKDIR} -p ${OBJECTDIR}

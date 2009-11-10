@@ -20,6 +20,7 @@
 #include "DefineShape.h"
 #include "DefineButton2.h"
 #include "DefineFont2.h"
+#include "DefineText.h"
 
 std::map<unsigned short, const char*> Tag::m_IdNameTable;
 
@@ -73,38 +74,31 @@ void Tag::_readIdAndLength(SWFReader *swf) {
     } else if (21 == this->ID()) // DefineBitsJPEG2
     {
         m_pTagInstance = new DefineJPEG2();
-    } else if (56 == this->ID())
-    {
+    } else if (56 == this->ID()) {
         m_pTagInstance = new Exports();
-    } else if (39 == this->ID())
-    {
+    } else if (39 == this->ID()) {
         m_pTagInstance = new DefineSprite();
-    } else if (26 == this->ID())
-    {
+    } else if (26 == this->ID()) {
         m_pTagInstance = new PlaceObject2();
-    } 
-	else if (2 == this->ID())
-    {
+    }
+    else if (2 == this->ID()) {
         m_pTagInstance = new DefineShape();
-    }
-	else if (34 == this->ID())
-    {
+    } else if (34 == this->ID()) {
         m_pTagInstance = new DefineButton2();
-    }
-	else if (48 == this->ID())
-    {
+    } else if (48 == this->ID()) {
         m_pTagInstance = new DefineFont2();
     }
-    else if (
-            0 == strncmp(GetType(this->ID()), "Define", strlen("Define") )
+    else if (11 == this->ID()) {
+        m_pTagInstance = new DefineText();
+    } else if (
+            0 == strncmp(GetType(this->ID()), "Define", strlen("Define"))
             ||
             4 == this->ID() // PlaceObject
             ||
             5 == this->ID() // RemoveObject
             ) {
         m_pTagInstance = new TagWithCharacterID();
-    }
-    else {
+    } else {
         m_pTagInstance = new TagInstance();
     }
 
@@ -150,9 +144,9 @@ const char* Tag::GetType(ushort id) {
 }
 
 void Tag::_initMatchTable() {
-    if( !Tag::m_IdNameTable.empty() )
+    if (!Tag::m_IdNameTable.empty())
         return;
-    
+
     Tag::m_IdNameTable[0] = "End (V1.0)";
     Tag::m_IdNameTable[1] = "ShowFrame (V1.0)";
     Tag::m_IdNameTable[2] = "DefineShape (V1.0)";

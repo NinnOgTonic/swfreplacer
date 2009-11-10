@@ -42,6 +42,7 @@ int Rect::Read(SWFReader *swf) {
     xMax = swf->ReadSB(nBits);
     yMin = swf->ReadSB(nBits);
     yMax = swf->ReadSB(nBits);
+    printf( "    Rect : %d, %d, %d, %d\n", xMin/20, yMin/20, xMax/20, yMax/20 );
 
     iTotalBytes = (int) ((5 + nBits * 4) / 8);
     iTotalBytes += ((5 + nBits * 4) % 8) > 0 ? 1 : 0;
@@ -58,6 +59,8 @@ int Rect::Write(SWFWriter *swf){
     swf->WriteSB(yMin,nBits);
     swf->WriteSB(yMax,nBits);
 
+    printf( "    Rect : %d, %d, %d, %d\n", xMin/20, yMin/20, xMax/20, yMax/20 );
+    
     iTotalBytes = (int) ((5 + nBits * 4) / 8);
     iTotalBytes += ((5 + nBits * 4) % 8) > 0 ? 1 : 0;
 

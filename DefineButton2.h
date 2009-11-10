@@ -1,7 +1,7 @@
 #pragma once
 
 
-#include "taginstance.h"
+#include "TagInstance.h"
 #include "Rect.h"
 #include "SWFReader.h"
 #include "SWFWriter.h"
@@ -1090,7 +1090,7 @@ struct stBUTTONRECORD{
 		// So for later use, I copy those unknown bits..
 		int iCurBitPos = swf->GetBitPosition();
 		if( iCurBitPos>0 && iCurBitPos<7 ){
-			printf( "## CUr Pos=%d, so read %d more bits\n", iCurBitPos,7-iCurBitPos);
+			printf( "      ## Reading in bumper data ? curPos=%d, so read %d more bits\n", iCurBitPos,7-iCurBitPos);
 			bTemp = swf->ReadUB(7-iCurBitPos);
 		}
 

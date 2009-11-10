@@ -1,7 +1,7 @@
 #pragma once
 
 
-#include "taginstance.h"
+#include "TagInstance.h"
 #include "DefineShape.h"
 
 #include <list>
@@ -63,7 +63,7 @@ struct stKERNINGRECORD{
 	//character.
 	UInt16 FontKerningCode2;
 	//FontKerningAdjustment SI16 Adjustment relative to left
-	//character¡¯s advance value.
+	//characterï¿½ï¿½s advance value.
 	Int16 FontKerningAdjustment;
 
 	void ReadData(SWFReader *swf, bool FontFlagsWideCodes){

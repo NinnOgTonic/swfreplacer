@@ -61,7 +61,6 @@ struct stMatrix {
 		NTranslateBits = swf->ReadUB(5);
 		TranslateX = swf->ReadUB(NTranslateBits);
 		TranslateY = swf->ReadUB(NTranslateBits);
-		printf("        ##Bits.. (%d)\n", 5+(NTranslateBits*2));
 		printf("        TranslateX/TranslateY = %d.%d/%d.%d\n", (int)(TranslateX>>16),  (int)(TranslateX&0x0000ffff), (int)(TranslateY>>16), (int)(TranslateY&0x0000ffff));
 		
 		iTotBit = 5 + (NTranslateBits*2);
